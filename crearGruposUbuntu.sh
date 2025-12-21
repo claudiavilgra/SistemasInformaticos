@@ -1,6 +1,7 @@
 #!/bin/bash
-tail -n +2 gruposUbuntu.csv | while IFS=, read -r nombre descripcion  
+tail -n +2 gruposUbuntu.csv | while IFS=, read -r nombre descripcion
 do
-  echo "nombre      -> [${nombre}]"
-  echo "descripcion      -> [${descripcion}]"
+  sudo groupadd "$nombre"
+  echo "Grupo '$nombre' creado para $descripcion"
 done
+
