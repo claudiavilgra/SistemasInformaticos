@@ -1118,9 +1118,8 @@
 		<!--DATA: RuleName, UtcTime, ProcessGuid, ProcessId, User, Image, TargetFilename, Hashes, IsExecutable, Archived -->
 
 	
-	<RuleGroup name="FileDeleteDetected" groupRelation="or">
-		<FileDeleteDetected onmatch="include">
-		</FileDeleteDetected>
+	<RuleGroup name="FileDelete" groupRelation="or">
+		<FileDelete onmatch="include" />
 	</RuleGroup>
 	
 	<!--SYSMON EVENT ID 24 : CLIPBOARD EVENT MONITORING [ClipboardChange]-->
